@@ -1,12 +1,11 @@
 import {Component} from "angular2/core";
 
 @Component({
-    selector: "test2",
+    selector: "contact",
     template: '<label>{{fruit}}</label>',
-    inputs:["fruit"]
 })
 
-export class test2Component{
+export class ContactComponent{
     
     
     public fruit = "nada"

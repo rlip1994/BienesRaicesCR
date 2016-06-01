@@ -17,4 +17,9 @@ export class PropiedadListComponent{
     
     public propiedades = [{nombre:"casaLinda", descripcion:"es una vara hermosa", precio:2000,direccion:"del arbol de mango a la derecha"},{nombre:"casaFea", descripcion:"es una vara fea", precio:5000,direccion:"del arbol de papaya a la derecha"}];
     
+    
+    
+   
+    
+    
 }
