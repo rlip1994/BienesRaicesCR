@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>RealEstate</title>
+<title>Bienes Raices CR</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
 <link rel="stylesheet" type="text/css" media="screen" href="css/jqtransform.css">
+<script src="node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+<script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="node_modules/rxjs/bundles/Rx.js"></script>
+<script src="node_modules/angular2/bundles/angular2.js"></script>
+<script src="node_modules/angular2/bundles/router.dev.js"></script>
+<script src="node_modules/angular2/bundles/http.js"></script>
 <script src="js/jquery-1.7.min.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/cufon-yui.js"></script>
@@ -49,31 +58,7 @@ $(document)
 <body>
 <div class="main">
   <!--==============================header=================================-->
-  <header>
-    <div>
-      <h1><a href="index.html"><img src="images/logo.jpg" alt=""></a></h1>
-      <div class="social-icons"> <span>Follow Us:</span> <a href="#" class="icon-3"></a> <a href="#" class="icon-2"></a> <a href="#" class="icon-1"></a> </div>
-      <div id="slide">
-        <div class="slider">
-          <ul class="items">
-            <li><img src="images/slider-1.jpg" alt=""></li>
-            <li><img src="images/slider-2.jpg" alt=""></li>
-            <li><img src="images/slider-3.jpg" alt=""></li>
-          </ul>
-        </div>
-        <a href="#" class="prev"></a><a href="#" class="next"></a> </div>
-      <nav>
-        <ul class="menu">
-          <li class="current"><a href="index.html">Main</a></li>
-          <li><a href="buying.html">Buying</a></li>
-          <li><a href="selling.html">Selling</a></li>
-          <li><a href="renting.html">Renting</a></li>
-          <li><a href="finance.html">Finance</a></li>
-          <li><a href="contacts.html">Contacts</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<my-app>Loading...</my-app>
   <!--==============================content================================-->
   <section id="content">
     <div class="container_12">
@@ -145,6 +130,18 @@ $(document)
       <div class="clear"></div>
     </div>
   </section>
+  <script>
+    System.config({
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js'
+            }
+        }
+    });
+    System.import('app/boot')
+            .then(null, console.error.bind(console));
+</script>
 </div>
 <!--==============================footer=================================-->
 <footer>
